@@ -1,0 +1,436 @@
+/******************************************************************* sart header *************************************************************/
+#iconHeader {
+   height: 3rem;
+   margin-left: -1.4rem;
+   margin-top: -0.5rem;
+}
+
+.profilpic {
+   border-radius: 5rem;
+   height: 6rem;
+   width: 6rem;
+   position: fixed;
+   border: solid 3px rgba(163, 163, 163, 0.411);
+}
+
+.toppage {
+   background-color: #fff;
+   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+   position: fixed;
+   width: 100%;
+   z-index: 3;
+   top: 0;
+   left: 0;
+}
+
+.menu li a {
+   display: block;
+   padding: 20px 20px;
+   border-right: 1px solid #ffffff;
+   text-decoration: none;
+}
+
+.menu li a:hover,
+.menu-btn:hover {
+   background-color: #ffffff;
+}
+
+.logo {
+   display: block;
+   float: left;
+   font-size: 2em;
+   padding: 10px 20px;
+   text-decoration: none;
+}
+
+/***  menu ***/
+/* 
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+} */
+
+.menu-icon .navicon {
+   background: #333;
+   display: block;
+   height: 2px;
+   position: relative;
+   transition: background 0.2s ease-out;
+   width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+   background: #333;
+   content: "";
+   display: block;
+   height: 100%;
+   position: absolute;
+   transition: all 0.2s ease-out;
+   width: 100%;
+}
+
+.menu-icon .navicon:before {
+   top: 5px;
+}
+
+.menu-icon .navicon:after {
+   top: -5px;
+}
+
+.menu-btn {
+   display: none;
+}
+
+.menu-btn:checked ~ .menu {
+   max-height: 240px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+   background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+   transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+   transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+   top: 0;
+}
+
+/******************************************************************* end header *************************************************************/
+
+/******************************************************************* start slider ***********************************************************/
+
+.container {
+   width: 100%;
+   margin: 0 auto;
+   border: 2px solid #02f9ff;
+   box-shadow: 0 0 10px #ffffff;
+}
+
+.carousel-item > div {
+   height: 36.6vw;
+   text-align: center;
+}
+
+.item-1 {
+   background: url(../img/JulienVignolo.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.item-2 {
+   background: url(../img/BaillardChristel.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.item-3 {
+   background: url(../img/Work_In_Progress.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+/* Carousel */
+
+.carousel {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+}
+
+.carousel-container {
+   list-style: none;
+
+   padding: 0;
+   margin: 0;
+   width: 300%;
+   transition: transform 0.3s cubic-bezier(0.694, 0.0482, 0.335, 1);
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+}
+
+.carousel-item {
+   position: relative;
+   width: 40%;
+}
+
+/*** Next / Prev Buttons ***/
+
+.carousel-prev,
+.carousel-next {
+   position: absolute;
+   top: 50%;
+   background-color: #222;
+   opacity: 0.7;
+   border-radius: 50%;
+   color: #fff;
+   font-size: 1em;
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   -webkit-transform: translate(0, -50%);
+   transform: translate(0, -50%);
+   text-align: center;
+   z-index: 1;
+   transition: opacity 0.3s ease;
+}
+
+.carousel-prev {
+   left: 2%;
+   padding-right: 3px;
+}
+
+.carousel-next {
+   right: 2%;
+   padding-left: 3px;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+   opacity: 1;
+}
+
+/*** Pagination ***/
+
+.carousel-pagination {
+   list-style: none;
+   position: absolute;
+   bottom: 3%;
+   left: 0;
+   right: 0;
+   width: 50%;
+   padding: 0;
+   margin: 0 auto;
+   text-align: center;
+   z-index: 10;
+}
+
+.carousel-bullet {
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   background-color: #000;
+   cursor: pointer;
+   margin: 0 7px;
+   border-radius: 50%;
+   opacity: 0.5;
+   transition-property: transform, opacity, background-color;
+   transition-duration: 0.3s;
+}
+
+.carousel-bullet:hover {
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+}
+
+.carousel-bullet.active-bullet,
+.carousel-bullet.active-bullet:hover {
+   opacity: 1;
+   -webkit-transform: scale(1.3);
+   transform: scale(1.3);
+   background-color: #fff;
+   cursor: default;
+}
+
+/******************************************************************* end slider ****************************************************************/
+
+/******************************************************************* start gallery *************************************************************/
+
+.row {
+   text-align: center;
+}
+
+.row figure {
+   height: 240px;
+   width: 240px;
+   margin: 0;
+   background-size: cover;
+   background-position: 50% 50%;
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+   transition: all 1s ease-in-out;
+   background-repeat: no-repeat;
+   z-index: 2;
+   display: inline-block;
+   position: relative;
+   border: 2px solid #02f9ff;
+}
+
+.row a {
+   display: inline-block;
+   text-align: center;
+   margin-top: 5vw;
+   text-decoration: none;
+   color: white;
+}
+
+.row a p {
+   position: absolute;
+   opacity: 0;
+   font-size: 20px;
+   top: 45%;
+   z-index: 100;
+   left: 0;
+   right: 0;
+   margin: auto;
+}
+
+figure:hover p {
+   opacity: 1;
+}
+
+figure:after {
+   content: "";
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   background-color: #050505;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   opacity: 0;
+   transition: all 0.3s ease-in-out 0s;
+   z-index: 99;
+}
+
+figure:hover:after {
+   opacity: 0.5;
+}
+
+.photo01 {
+   background: url(../img/JulienVignolo.png);
+}
+
+.photo02 {
+   background: url(../img/BaillardChristel.png);
+}
+
+.photo03 {
+   background: url(../img/Work_In_Progress.png);
+}
+
+/*** lightbox ***/
+
+.lightbox-target {
+   position: fixed;
+   top: -100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   width: 100%;
+   opacity: 0;
+   -webkit-transition: opacity 0.5s ease-in-out;
+   -moz-transition: opacity 0.5s ease-in-out;
+   -o-transition: opacity 0.5s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
+   overflow: hidden;
+   z-index: 300;
+}
+.lightbox {
+   margin-left: 5vw;
+}
+
+.lightbox-target .container {
+   border: 0;
+   position: absolute;
+   top: 50vh;
+   margin-left: 50vw;
+   background-color: rgb(0, 0, 0);
+   color: black;
+   -webkit-transition: 0.5s ease-in-out;
+   -moz-transition: 0.5s ease-in-out;
+   -o-transition: 0.5s ease-in-out;
+   transition: 0.5s ease-in-out;
+   text-align: left;
+   transform: translate3d(-50%, -50%, 0);
+}
+
+.container .elements {
+   display: inline-block;
+   width: 40%;
+   max-height: 425px;
+}
+
+.lightbox-close:hover {
+   background: #eceff0;
+   color: black;
+}
+
+.lightbox-close {
+   background: #727272;
+   color: #ffffff;
+   line-height: 25px;
+   position: absolute;
+   right: 20vw;
+   text-align: center;
+   top: -6vw;
+   width: 24px;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 12px;
+   box-shadow: 1px 1px 3px #000;
+}
+
+.lightbox-target:target {
+   opacity: 1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+}
+
+.lightbox-target:target img {
+   height: 40vw;
+   width: 60vw;
+   vertical-align: top;
+   margin-left: 20vw;
+}
+
+.lightbox-visit {
+   background: #000000;
+   color: #ffffff;
+   line-height: 25px;
+   position: absolute;
+   right: 45vw;
+   text-align: center;
+   top: -10vw;
+   width: 10rem;
+   height: 2rem;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 12px;
+   box-shadow: 1px 1px 3px #000;
+   border: 2px solid white;
+}
+
+.lightbox-visit:hover {
+   background: white;
+   border: 2px solid black;
+   color: black;
+   box-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+/******************************************************************* end gallery ***************************************************************/

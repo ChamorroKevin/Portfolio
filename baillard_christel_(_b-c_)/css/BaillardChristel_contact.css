@@ -1,0 +1,106 @@
+.imgbackgroundcontact{
+  min-height: 100%;
+width: 35%; background: url(../img/contact_bc.jpg);display:flex;flex-direction: column;background-size: cover;
+background-repeat: no-repeat;
+order: 1;
+}
+.imgbackgroundacceuil{
+  min-height: 100%;
+width: 35%; background: url(../img/acceuil_bc.jpg);display:flex;flex-direction: column;background-size: cover;
+background-repeat: no-repeat;
+order: 1;
+}
+
+.order2{
+  order:2;
+
+}
+.order3{
+  order:3
+}
+.adressmap{
+  height: 50%;
+width: 100%; ;display:flex;flex-direction: row;
+}
+.divqr{
+  height: 50%;
+width: 100%;;display:flex;flex-direction: row;
+
+}
+
+.ggmap{
+  margin-top: 5vw; border-radius: 1rem;z-index: 2;position: relative;border: 2px  solid rgb(255, 255, 255); height: 20vw; width: 20vw; margin-left: -25vw;
+}
+.surcouche{
+  position: absolute; background: rgba(255, 255, 255, 0.671);height: 100%;width: 60%;margin-right: -35%;z-index: 1;
+}
+
+.padresse{
+  position: relative;z-index: 1;display:flex;justify-content: flex-end;margin-top: -10vw;width: 170%;
+
+}
+.padresse2{
+  position: relative;z-index: 1;display:flex;justify-content: flex-end;margin-top: -10vw;width: 170%;
+
+}
+.padresse3{
+  position: relative;z-index: 1;display:flex;justify-content: flex-end;margin-top: -10vw;width: 170%;
+
+}
+
+@media  (max-width: 890px)  { 
+  body{flex-direction: column;
+   
+    }
+  .imgbackgroundcontact{
+z-index: 1;
+  width: 100%; 
+  margin-top: 35vw;
+  margin-left: -10vw;
+  }
+  .divadressmap{
+    flex-direction: column;
+    
+   
+    margin-left: 35vw;
+    width: 80%;
+  }
+  .divqr{
+ margin-left: 35vw;
+   
+ margin-top: 10vw;
+ 
+  }
+  .ggmap{
+    margin-left: -25vw;
+    height:55vw;
+    width: 55vw;
+  }
+  .surcouche{
+    height:160%;
+width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(51, 122, 78, 0.205);
+  }
+
+.padresse{
+  margin-top: 20vw;
+  margin-left: -10vw;
+  width: 200%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+

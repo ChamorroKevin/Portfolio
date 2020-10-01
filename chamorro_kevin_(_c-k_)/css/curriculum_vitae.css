@@ -1,0 +1,364 @@
+/******************************************************************* start cv ******************************************************************/
+h3 {
+   padding-bottom: 3vw;
+   padding-top: 3vw;
+}
+
+
+p {
+   padding-top: 2vw;
+}
+.container_cv {
+   width: 90%;
+   margin-left: 5%;
+}
+
+.container_cv h1 {
+   margin-top: 8rem;
+
+   font-size: 3.5em;
+   color: rgb(255, 255, 255);
+}
+
+#h1ptag {
+   font-size: 1.05em;
+   line-height: 25px;
+   margin-top: 0.1%;
+   padding: 5px;
+}
+
+.container_cv ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+
+/*nav menu styling*/
+.container_cv nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   text-align: center;
+   transition: max-height 0.2s;
+}
+
+.container_cv nav ul li {
+   display: inline-block;
+   text-transform: uppercase;
+   font-family: "Open Sans";
+   padding: 20px;
+}
+
+.nav-item a:hover {
+   color: #02f9ff;
+   font-weight: 300;
+}
+.nav-item a {
+   color: rgb(255, 255, 255);
+   font-weight: 300;
+}
+
+.container_cv nav ul li a:link,
+.container_cvnav ul li a:visited {
+   display: block;
+   font-size: 0.9em;
+   padding: 10px 20px 0 0;
+   color: #ffffff;
+   text-decoration: none;
+   font-weight: 500;
+   letter-spacing: 2px;
+}
+
+/*hide button on large screens*/
+
+.handle {
+   display: none;
+}
+
+.main-content {
+   background-color: #5f5f5fc0;
+   margin-right: 2rem;
+   margin-left: 2rem;
+   line-height: 20px;
+   color: rgb(255, 255, 255);
+   padding-bottom: 5rem;
+}
+
+.container_cv h3 {
+   margin-top: 1rem;
+   font-size: 2rem;
+   letter-spacing: 5px;
+   text-transform: uppercase;
+}
+
+.container_cvsection {
+   width: 70%;
+   margin-left: 15%;
+   margin-bottom: 10px;
+}
+
+.container_cvp {
+   font-size: 1.1em;
+   padding: 2px;
+   line-height: 25px;
+}
+
+.container_cv span {
+   height: 100px;
+   width: 100px;
+   border-radius: 80%;
+   background-color: #fff;
+   display: inline-block;
+   margin: 5%;
+   margin-top: 5%;
+   z-index: -1;
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+
+/*% charts*/
+.firstchart,
+.secondchart,
+.thirdchart {
+   display: inline-block;
+   margin: 5%;
+}
+
+.level {
+   font-style: bold;
+   letter-spacing: 3px;
+}
+
+.container_cv circle {
+   fill: transparent;
+}
+
+/*first circle*/
+#outerc1 {
+   fill: transparent;
+   stroke: rgb(255, 255, 255);
+   stroke-width: 5;
+   stroke-dasharray: 0 190 0;
+   stroke-linecap: "round";
+}
+
+#innerc1 {
+   fill: transparent;
+   stroke: rgb(8, 8, 8);
+   stroke-width: 1;
+}
+
+/*end of first circle*/
+
+/*start of second circle*/
+#outerc2 {
+   fill: transparent;
+   stroke: #fff;
+   stroke-width: 5;
+   stroke-dasharray: 100 100;
+   stroke-linecap: "round";
+}
+
+#innerc2 {
+   fill: transparent;
+   stroke: rgb(0, 0, 0);
+   stroke-width: 1;
+}
+/*end of second chart*/
+
+/*start of 3rd circle*/
+#outerc3 {
+   fill: transparent;
+   stroke: #fff;
+   stroke-width: 5;
+   stroke-dasharray: 185 0;
+   stroke-linecap: "round";
+}
+
+#innerc3 {
+   fill: transparent;
+   stroke: rgb(0, 0, 0);
+   stroke-width: 1;
+}
+/*end of third chart*/
+
+/*end of charts*/
+
+/*timeline*/
+.timeline ul li {
+   list-style-type: none;
+   position: relative;
+   width: 4px;
+   margin: 0 auto;
+   padding-top: 50px;
+   background: #eee;
+   color: #fff;
+}
+
+.timeline ul li::after {
+   content: "";
+   position: absolute;
+   left: 500%;
+   bottom: 0;
+   transform: translateX(-50%);
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+}
+
+.container_cv div time {
+   position: relative;
+   right: 10vw;
+}
+
+.timeline ul li div {
+   position: relative;
+   bottom: 0;
+   width: 10vw;
+   padding: 2vw;
+   border: 1.5px solid rgb(255, 255, 255);
+   border-radius: 5px;
+   background: transparent;
+}
+
+.timeline ul li div:hover {
+   background-color: #fff;
+   color: #000000;
+   border: 1.5px solid rgb(7, 7, 7);
+}
+
+.timeline ul li div::before {
+   content: "";
+   position: absolute;
+   bottom: 7px;
+   width: 0;
+   height: 0;
+   border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+   left: 15px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+   left: -15px;
+   border-width: 8px 16px 8px 0;
+   border-color: transparent rgb(255, 255, 255) transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+   left: -15vw;
+}
+
+.timeline ul li:nth-child(even) div::before {
+   left: 14vw;
+   border-width: 8px 0 8px 16px;
+   border-color: transparent rgb(255, 255, 255) transparent;
+}
+
+.showing {
+ color: white;
+}
+
+/*** employment section ***/
+
+/*display nav items one block form with bottom border*/
+@media screen and (max-width: 900px) {
+   nav ul {
+      max-height: 0;
+      text-align: center;
+   }
+
+   .showing {
+      max-height: 50em;
+   }
+
+   .handle {
+      display: block;
+      padding: 10px;
+      border-radius: 1px;
+      color: #fff;
+      font-family: aharoni;
+      letter-spacing: 5px;
+      font-weight: 500;
+      background-color: #000000;
+      opacity: 0.7;
+      text-align: center;
+      font-size: 1.9em;
+      cursor: pointer;
+      line-height: 95px;
+      box-sizing: border-box;
+      margin-top: 2%;
+   }
+
+   .handle:hover {
+      background-color: #444;
+   }
+
+   .container_cv nav ul li {
+      display: block;
+
+      border-bottom: 1px solid #fff;
+      width: 100%;
+      box-sizing: border-box;
+   }
+
+   .container_cv nav ul li:hover {
+      background-color: #d1d1d1;
+      border-bottom: none;
+   }
+
+   .timeline ul li div:hover {
+      background-color: rgba(0, 0, 0, 0);
+      color: #fcfcfc;
+      border: 1.5px solid rgba(7, 7, 7, 0);
+   }
+
+   .container_cv a {
+      color: #fff;
+   }
+   .container_cv li {
+      left: -50%;
+   }
+
+   #hobbiessectionh3id {
+      margin-left: -10%;
+      margin-bottom: -20px;
+      line-height: 0.7em;
+   }
+
+   .timeline ul li div {
+      width: 80%;
+      margin-left: 10vw;
+      border: 1.5px solid rgba(255, 255, 255, 0);
+      border-radius: 5px;
+      background: transparent;
+   }
+
+   .timeline ul li:nth-child(odd) div::before {
+      display: none;
+   }
+
+   .timeline ul li:nth-child(even) div::before {
+      display: none;
+   }
+
+   .timeline ul li:nth-child(even) div {
+      left: 0vw;
+   }
+
+   .timeline ul li:nth-child(odd) div {
+      left: 0px;
+   }
+
+   .container_cv h3 {
+      border: 2px solid white;
+      border-radius: 1rem;
+      font-size: 1rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+   }
+}
+
+/******************************************************************* end cv ********************************************************************/

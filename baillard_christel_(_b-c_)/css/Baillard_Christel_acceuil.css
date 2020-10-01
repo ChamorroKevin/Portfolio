@@ -1,0 +1,310 @@
+/******************************************************************* sart etc *************************************************************/
+html{
+margin: 0;
+padding: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+  }
+  body {
+  background: rgba(150, 170, 150, 0.575);
+  display: flex;
+   flex-direction: row;
+justify-content: center;
+  text-align: center;
+   font-family: 'Syne', sans-serif;
+   color: rgb(59, 59, 59);
+  width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+  
+  }
+  
+  a {
+   color: #000;
+  }
+  
+  .title{
+  height: 8rem;
+  margin-top: 20%;
+  color: black;
+  width: 100%;
+  z-index: 1;
+  }
+    
+  
+    
+  .paragraphe {
+margin-top: 20vw;
+  width: 130%;
+ margin-left: -40vw;
+ scale: 1.2;
+ position: relative;z-index: 1;
+  }
+  .paragraphe2 {
+margin-top: -22vw;
+  width: 15vw;
+ margin-left: -90%;
+ scale: 1.2;
+ position: relative;z-index: 1;
+  }
+  .paragraphe3 {
+    margin-top: 22vw;
+    width: 48%;
+   margin-left: -9vw;
+   scale: 1.2;
+   height: 20%;
+  }
+  .paragraphe4 {
+    margin-top: 25vw;
+    width: 98%;
+   margin-left: -100vw;
+   scale: 1.2;
+   height: 20%;
+  }
+  
+  .quote{
+ height: 5%;
+ width: 100%;
+margin-left: -20%;
+ margin-top: -15%;
+ z-index: 1;
+   }
+  
+  
+  
+  
+  /******************************************************************* end etc *************************************************************/
+  
+  /******************************************************************* sart header *************************************************************/
+  .profilpic{
+    border-radius: 5rem;
+    height: 8rem;
+    width: 8rem;
+    position: fixed;
+    border: solid 1px black;
+   }
+  
+   
+   
+  .profilpic:hover{
+    background: black;
+   }
+  
+  .toppage {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    left: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  li a:hover,
+  .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .overlay {
+    position: absolute;
+    border-radius: 5rem;
+    height: 8rem;
+    width: 8rem;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #0000005e;
+  }
+  
+  .logo:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  
+  /***  menu ***/
+  
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+   
+  }
+  
+  
+  
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  
+  
+  .menu-icon 
+  .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .menu-icon 
+  .navicon:before,
+  .menu-icon 
+  .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .menu-icon 
+  .navicon:before {
+    top: 5px;
+  }
+  
+  .menu-icon 
+  .navicon:after {
+    top: -5px;
+  }
+  
+  
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-btn:checked ~
+  .menu {
+    max-height: 240px;
+  }
+  
+   .menu-btn:checked ~ 
+   .menu-icon .navicon {
+    background: transparent;
+  }
+  
+   .menu-btn:checked ~ 
+   .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+   .menu-btn:checked ~ 
+   .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+   .menu-btn:checked ~ 
+   .menu-icon:not(.steps) 
+   .navicon:before,
+   .menu-btn:checked ~ 
+   .menu-icon:not(.steps) 
+   .navicon:after {
+    top: 0;
+  }
+  
+  
+  
+  
+  /******************************************************************* end header *************************************************************/
+  
+  /******************************************************************* sart mediaqueries ******************************************************/
+  
+  
+  
+  
+  @media  (max-width: 7680x) {
+    .title{
+      margin-top: 12rem;
+    }
+  }
+  
+  
+  
+  @media (min-width: 768px) {
+   li {
+      float: left;
+    }
+   li a {
+      padding: 20px 30px;
+    }
+   .menu {
+      clear: none;
+       max-height: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .menu-icon {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @media all and (min-width: 1340px) and (max-width: 999999999px) {
+  
+  }
+  @media all and (min-width: 0px) and (max-width: 1500px) {
+  
+  }
+  
+  @media screen and (orientation:portrait) {
+  .text-center{
+    margin-top: 6vh;
+    background: black;
+  
+  }
+  }
